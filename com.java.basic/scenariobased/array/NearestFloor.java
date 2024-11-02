@@ -15,7 +15,7 @@ public class NearestFloor {
              }
          }
         Printing.printArray("Initial Floors",floors);
-        System.out.println("Nearest floor from current floor "+currentFloor + " is "+ nearestFloor);
+        System.out.println("Nearest floor from current floor "+currentFloor + " is "+ nearestFloor );
 
 
 
