@@ -2,7 +2,7 @@ public class Palindrome {
     public static void main(String[] args) {
         Palindrome palindrome = new Palindrome();
         int number = 12321;
-        String input = "madam";
+        String input = "12321";
         boolean isNumberPalindrome = palindrome.checkNumberPalindrome(number);
         boolean isStringPalindrome = palindrome.checkStringPalindrome(input);
         System.out.println("Number " + number +" is palindrome: " + isNumberPalindrome);
