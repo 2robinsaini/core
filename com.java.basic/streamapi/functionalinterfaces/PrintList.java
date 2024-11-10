@@ -1,4 +1,4 @@
-package streamapi;
+package streamapi.functionalinterfaces;
 
 
 import java.util.List;
