@@ -3,6 +3,7 @@ package streamapi;
 import streamapi.functionalinterfaces.PrintList;
 import streamapi.functionalinterfaces.PrintMap;
 
+
 public class FunctionalInterfacesImpl {
 
     PrintList<String> printStringList = ((m, l) -> {
@@ -13,7 +14,7 @@ public class FunctionalInterfacesImpl {
 
     PrintMap<String,Long> printStringLongMap = (msg, map) -> {
         System.out.print(msg+ " ");
-        map.entrySet().stream().forEach(ent -> System.out.print(ent.getKey() + ":" + ent.getValue()+ ", "));
+        map.entrySet().forEach(ent -> System.out.print(ent.getKey() + ":" + ent.getValue()+ ", "));
         System.out.println();
     };
 

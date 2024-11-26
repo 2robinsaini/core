@@ -3,6 +3,7 @@ package streamapi;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -15,9 +16,9 @@ public class StringExamples extends FunctionalInterfacesImpl {
         stringExamples.concatExample();
         stringExamples.flatMapExample();
         stringExamples.listMapExample();
+        stringExamples.listReduceExample();
 
     }
-
 
     private void concatExample(){
         List<String> batsman = Arrays.asList("Rohit","Virat","Surya");
@@ -40,6 +41,12 @@ public class StringExamples extends FunctionalInterfacesImpl {
                 "Hardik","Jadeja","Kohli");
         Map<String,Long> playerCountMap = players.stream().collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
         printStringLongMap.printMap("Players count map:",playerCountMap);
+    }
+
+    private void listReduceExample() {
+        List<String> batsman = Arrays.asList("Rohit","Virat","Surya","Pant");
+        Optional<String> reducedPlayers = batsman.stream().reduce((name1,name2) -> name1 + " & " + name2);
+        reducedPlayers.ifPresent(s -> System.out.println(s));
     }
 
 }
